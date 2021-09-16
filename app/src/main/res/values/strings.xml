@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="submit">Submit</string>
+    <string name="please_enter_the_pincode_here">Please enter the Pincode here</string>
+    <string name="temperature">Temperature</string>
+    <string name="please_enter_the_valid_picode">Please enter a valid pincode</string>
+</resources>
