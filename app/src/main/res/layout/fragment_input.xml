@@ -4,52 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".InputFragment">
 
 
-    <fragment
-        android:id="@+id/input_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.weatherapp.InputFragment"
-        >
-
-    </fragment>
-
-    <!--
     <EditText
-        android:id="@+id/city_pincode"
+        android:id="@+id/input_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:hint="@string/please_enter_the_pincode_here"
-
+        android:layout_marginTop="20dp"
+        android:hint="@string/please_enter_ur_pincode_here"
         android:inputType="number"
-        android:minHeight="48dp"
+        android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        tools:layout_editor_absoluteX="20dp" />
 
     <Button
-        android:id="@+id/submit_area"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="@string/submit"
+        android:layout_marginTop="30dp"
+        android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/city_pincode" />
+        app:layout_constraintTop_toBottomOf="@+id/input_text" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/error_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:text="@string/temperature"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submit_area" />
-
-        -->
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:text="TextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
