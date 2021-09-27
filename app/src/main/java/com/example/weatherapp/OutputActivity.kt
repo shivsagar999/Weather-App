@@ -14,6 +14,14 @@ class OutputActivity : AppCompatActivity() {
 
 
 
+
+    /* Important
+
+    this activity is unnecessary so u can remove this file along with the xml file attached to this file.
+
+
+     */
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_output)

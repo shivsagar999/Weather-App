@@ -80,6 +80,14 @@ class InputFragment : Fragment() {
         }
     }
 
+
+    override fun onStart() {
+        super.onStart()
+
+        // write the code for permissions
+
+    }
+
     private fun getWeather() {
         var finalText: String? = null
         val pinCode = binding.inputText.text.toString()

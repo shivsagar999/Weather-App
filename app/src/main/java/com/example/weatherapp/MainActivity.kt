@@ -20,12 +20,21 @@ class MainActivity : AppCompatActivity(), InputFragment.OnItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-           /* val tempValue =  "Temp = "+ resultWeather!!.main.temp.toString() +" Place = "+
+/*          val tempValue =  "Temp = "+ resultWeather!!.main.temp.toString() +" Place = "+
             resultWeather!!.name.toString()
+*/
 
-            */
+        val fragment = InputFragment()
+        supportFragmentManager.beginTransaction().apply{
+            add(R.id.input_fragment, fragment)
+            setReorderingAllowed(true)
+            addToBackStack(null)
+            commit()
+        }
 
     }
+
+
 
 
     override fun onButtonClicked(text: String) {
@@ -33,11 +42,20 @@ class MainActivity : AppCompatActivity(), InputFragment.OnItemClickListener {
 
         Log.d("Wagle", "you clicked the mainactivity button $text")
 
-        val intent: Intent = Intent(this, OutputActivity::class.java)
+        val fragment1 = OutputFragment()
+        fragment1.setText(text)
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.input_fragment, fragment1)
+            addToBackStack(null)
+            commit()
+        }
 
-        intent.putExtra("temp_value", text)
+
+        //val intent: Intent = Intent(this, OutputActivity::class.java)
+
+        //intent.putExtra("temp_value", text)
         //Log.d("Wagle", "you paseed 40 $intent")
-        this.startActivity(intent)
+        //this.startActivity(intent)
         //Log.d("Wagle", "you passed 42")
     }
 

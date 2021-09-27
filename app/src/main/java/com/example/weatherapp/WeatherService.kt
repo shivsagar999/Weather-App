@@ -17,6 +17,10 @@ interface WeatherInterface{
 
     @GET("weather?appid=$apiKey")
     fun getWeather(@Query("zip")code_country : String):Call<WeatherInfo>
+
+    @GET("weather?appid=$apiKey")
+    fun getWeatherUsingLatLong(@Query("lat")Lat: Double,
+                               @Query("Lon")Lon: Double):Call<WeatherInfo>
 }
 
 object WeatherService {

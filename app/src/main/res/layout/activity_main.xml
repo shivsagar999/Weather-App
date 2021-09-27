@@ -8,14 +8,14 @@
     tools:context=".MainActivity">
 
 
-    <fragment
+    <FrameLayout
         android:id="@+id/input_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.weatherapp.InputFragment"
+
         >
 
-    </fragment>
+    </FrameLayout>
 
     <!--
     <EditText
