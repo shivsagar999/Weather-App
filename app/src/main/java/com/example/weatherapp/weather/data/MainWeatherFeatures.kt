@@ -1,4 +1,4 @@
-package com.example.weatherapp
+package com.example.weatherapp.weather.data
 
 data class MainWeatherFeatures(val temp: Float, val feels_like: Float,
                                 val temp_min: Float,
@@ -6,5 +6,4 @@ data class MainWeatherFeatures(val temp: Float, val feels_like: Float,
                                 val pressure: Float,
                                 val humidity: Float,
                                 val sea_level: Float,
-                                val grnd_level: Float) {
-}
+                                val grnd_level: Float)

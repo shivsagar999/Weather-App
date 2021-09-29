@@ -1,6 +1,6 @@
 package com.example.weatherapp
 
-import com.google.gson.Gson
+import com.example.weatherapp.weather.data.WeatherInfo
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -18,9 +18,6 @@ interface WeatherInterface{
     @GET("weather?appid=$apiKey")
     fun getWeather(@Query("zip")code_country : String):Call<WeatherInfo>
 
-    @GET("weather?appid=$apiKey")
-    fun getWeatherUsingLatLong(@Query("lat")Lat: Double,
-                               @Query("Lon")Lon: Double):Call<WeatherInfo>
 }
 
 object WeatherService {
