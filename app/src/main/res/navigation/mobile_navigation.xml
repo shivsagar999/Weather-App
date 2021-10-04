@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/inputFragment">
+
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.example.weatherapp.InputFragment"
+        android:label="Enter Pin"
+        tools:layout="@layout/fragment_input" >
+        <action
+            android:id="@+id/action_inputFragment_to_outputFragment"
+            app:destination="@id/outputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outputFragment"
+        android:name="com.example.weatherapp.OutputFragment"
+        android:label="Weather Info"
+        tools:layout="@layout/fragment_output">
+
+    <argument
+        android:name="weatherInfo"
+        app:argType="string"
+        android:defaultValue="Temp = 23"/>
+        <action
+            android:id="@+id/action_outputFragment_to_dailyForecastFragment"
+            app:destination="@id/dailyForecastFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/dailyForecastFragment"
+        android:name="com.example.weatherapp.DailyForecastFragment"
+        android:label="Daily Forecast"
+        tools:layout="@layout/fragment_daily_forecast" />
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="com.example.weatherapp.weatherPrediction.data.PermissionFragment"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission" >
+        <action
+            android:id="@+id/action_permissionFragment_to_inputFragment"
+            app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_permissionFragment_to_outputFragment"
+            app:destination="@id/outputFragment" />
+    </fragment>
+
+</navigation>

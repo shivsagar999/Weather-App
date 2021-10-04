@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/daily_forecast_backgoround.xml" value="0.1" />
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/gradient_bg.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_output.xml" value="0.1" />
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/adapter_list.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_daily_forecast.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_input.xml" value="0.20471014492753623" />
-        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_output.xml" value="0.20471014492753623" />
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_output.xml" value="0.115625" />
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_permission.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/new_file.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/xml/network_security_config.xml" value="0.13020833333333334" />
       </map>
     </option>
