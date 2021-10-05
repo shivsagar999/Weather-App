@@ -1,4 +1,4 @@
-package com.example.weatherapp.weather.data
+package com.eurofins.weatherapp.weather.data
 
 data class MainWeatherFeatures(val temp: Float, val feels_like: Float,
                                 val temp_min: Float,

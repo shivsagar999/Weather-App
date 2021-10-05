@@ -1,4 +1,4 @@
-package com.example.weatherapp
+package com.eurofins.weatherapp
 
 
 import android.annotation.SuppressLint
@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.eurofins.weatherapp.data.WeatherViewModel
-import com.example.weatherapp.databinding.FragmentInputBinding
+import com.eurofins.weatherapp.databinding.FragmentInputBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 

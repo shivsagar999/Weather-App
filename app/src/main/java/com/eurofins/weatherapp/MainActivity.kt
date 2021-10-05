@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.weatherapp.R
+import com.eurofins.weatherapp.R
 
 class MainActivity : AppCompatActivity() {
 

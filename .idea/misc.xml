@@ -6,6 +6,7 @@
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/daily_forecast_backgoround.xml" value="0.1" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/gradient_bg.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/gradient_bg1.xml" value="0.1390625" />
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/gradient_bg2.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1390625" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/oval_button.xml" value="0.1390625" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/round_button.xml" value="0.1390625" />
@@ -13,7 +14,7 @@
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_output.xml" value="0.1" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/adapter_list.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_daily_forecast.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_input.xml" value="0.20471014492753623" />
+        <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_input.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_output.xml" value="0.10552536231884058" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/fragment_permission.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/U9NF/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/new_file.xml" value="0.13020833333333334" />

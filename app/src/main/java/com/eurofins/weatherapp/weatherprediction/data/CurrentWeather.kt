@@ -1,6 +1,6 @@
 package com.eurofins.weatherapp.weatherprediction.data
 
-import com.example.weatherapp.weather.data.Weather
+import com.eurofins.weatherapp.weather.data.Weather
 
 data class CurrentWeather(val dt: Long, val sunrise: Long, val sunset: Long, val temp: Float, val feels_like: Float,
                             val pressure: Long, val humidity: Int, val dew_point: Float, val uvi: Float,

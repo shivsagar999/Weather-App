@@ -1,4 +1,4 @@
-package com.example.weatherapp
+package com.eurofins.weatherapp
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.eurofins.weatherapp.data.WeatherViewModel
-import com.example.weatherapp.adapter.WeatherForecastAdapter
-import com.example.weatherapp.databinding.FragmentDailyForecastBinding
+import com.eurofins.weatherapp.adapter.WeatherForecastAdapter
+import com.eurofins.weatherapp.databinding.FragmentDailyForecastBinding
 
 
 class DailyForecastFragment : Fragment() {

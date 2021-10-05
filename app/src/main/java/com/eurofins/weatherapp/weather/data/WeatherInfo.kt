@@ -1,4 +1,9 @@
-package com.example.weatherapp.weather.data
+package com.eurofins.weatherapp.weather.data
+
+import com.eurofins.weatherapp.weather.data.Coordinates
+import com.eurofins.weatherapp.weather.data.MainWeatherFeatures
+import com.eurofins.weatherapp.weather.data.Weather
+import com.example.weatherapp.weather.data.Wind
 
 data class WeatherInfo(val coord: Coordinates, val weather: List<Weather>, val base: String,
                        val main : MainWeatherFeatures,

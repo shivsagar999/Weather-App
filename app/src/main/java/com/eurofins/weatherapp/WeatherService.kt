@@ -1,7 +1,7 @@
-package com.example.weatherapp
+package com.eurofins.weatherapp
 
 import com.eurofins.weatherapp.weatherprediction.data.WeatherForecastinfo
-import com.example.weatherapp.weather.data.WeatherInfo
+import com.eurofins.weatherapp.weather.data.WeatherInfo
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
