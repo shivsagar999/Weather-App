@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.eurofins.weatherapp.data.WeatherViewModel
-import com.example.weatherapp.R
+import com.eurofins.weatherapp.R
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 

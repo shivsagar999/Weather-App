@@ -76,7 +76,7 @@
             android:contentDescription="@string/cloud_cover"
             android:layout_width="41dp"
             android:layout_height="39dp"
-            android:src="@drawable/humidity" />
+            android:src="@drawable/_3_cloud_png_image" />
 
         <TextView
             android:id="@+id/cloud_cover"

@@ -6,8 +6,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.eurofins.weatherapp.weatherprediction.data.WeatherForecastinfo
-import com.example.weatherapp.WeatherService
+import com.eurofins.weatherapp.WeatherService
+
 import com.example.weatherapp.weather.data.WeatherInfo
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

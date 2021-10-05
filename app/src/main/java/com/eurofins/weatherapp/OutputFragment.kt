@@ -11,8 +11,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.eurofins.weatherapp.data.WeatherViewModel
-import com.example.weatherapp.R
-import com.example.weatherapp.databinding.FragmentOutputBinding
+import com.eurofins.weatherapp.R
+import com.eurofins.weatherapp.databinding.FragmentOutputBinding
 
 
 class OutputFragment : Fragment() {

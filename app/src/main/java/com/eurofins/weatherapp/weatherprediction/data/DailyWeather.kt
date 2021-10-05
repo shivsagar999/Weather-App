@@ -1,6 +1,6 @@
 package com.eurofins.weatherapp.weatherprediction.data
 
-import com.example.weatherapp.weather.data.Weather
+import com.eurofins.weatherapp.weather.data.Weather
 
 
 data class DailyWeather(val dt: Long, val sunrise: Long, val sunset: Long, val moonrise: Long,

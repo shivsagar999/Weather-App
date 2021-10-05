@@ -1,3 +1,3 @@
-package com.example.weatherapp.weather.data
+package com.eurofins.weatherapp.weather.data
 
 data class Weather(val id : Int , val main : String, val description : String, val icon : String )

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/inputFragment"
-        android:name="com.example.weatherapp.InputFragment"
+        android:name="com.eurofins.weatherapp.InputFragment"
         android:label="Enter Pin"
         tools:layout="@layout/fragment_input" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/dailyForecastFragment"
-        android:name="com.example.weatherapp.DailyForecastFragment"
+        android:name="com.eurofins.weatherapp.DailyForecastFragment"
         android:label="Daily Forecast"
         tools:layout="@layout/fragment_daily_forecast" />
     <fragment

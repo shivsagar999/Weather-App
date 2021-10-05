@@ -1,4 +1,4 @@
-package com.example.weatherapp.adapter
+package com.eurofins.weatherapp.adapter
 
 import android.os.Build
 import android.view.LayoutInflater
@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
+import com.eurofins.weatherapp.R
 import com.eurofins.weatherapp.data.DailyForecastList
-import com.example.weatherapp.R
-import com.example.weatherapp.adapter.WeatherForecastAdapter.WeatherForecastViewHolder
+
+import com.eurofins.weatherapp.adapter.WeatherForecastAdapter.WeatherForecastViewHolder
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -22,9 +23,6 @@ class WeatherForecastAdapter(private val dataset: List<DailyForecastList>) :
     //   DailyForecastList(27.0f, "cloudy"), DailyForecastList(28.0f, "sunny") )
 
     val date = Date()
-
-
-
 
     class WeatherForecastViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView1: TextView = view.findViewById(R.id.temperature)
