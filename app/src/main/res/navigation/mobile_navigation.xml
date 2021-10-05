@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation.xml"
-    app:startDestination="@id/inputFragment">
+    app:startDestination="@id/permissionFragment">
 
     <fragment
         android:id="@+id/inputFragment"
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/outputFragment"
-        android:name="com.example.weatherapp.OutputFragment"
+        android:name="com.eurofins.weatherapp.OutputFragment"
         android:label="Weather Info"
         tools:layout="@layout/fragment_output">
 
@@ -36,7 +36,7 @@
         tools:layout="@layout/fragment_daily_forecast" />
     <fragment
         android:id="@+id/permissionFragment"
-        android:name="com.example.weatherapp.weatherPrediction.data.PermissionFragment"
+        android:name="com.eurofins.weatherapp.weatherprediction.data.PermissionFragment"
         android:label="fragment_permission"
         tools:layout="@layout/fragment_permission" >
         <action
