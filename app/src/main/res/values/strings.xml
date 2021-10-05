@@ -4,8 +4,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="your_temperature">Your Temperature</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="please_enter_ur_pincode_here">Plaese Enter ur Pincode here</string>
+
     <string name="submit">Submit</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Description</string>
+    <string name="cloud_cover">Cloud cover</string>
+    <string name="pressure">Pressure</string>
+    <string name="display_daily_forecast">Display Daily Forecast</string>
+    <string name="please_enter_pin_code_here">Please Enter pin code here</string>
 </resources>
