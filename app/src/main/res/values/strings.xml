@@ -1,12 +1,7 @@
 <resources>
     <string name="app_name">Weather App</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="your_temperature">Your Temperature</string>
-    <!-- TODO: Remove or change this placeholder text -->
-
     <string name="submit">Submit</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="description">Description</string>
     <string name="cloud_cover">Cloud cover</string>
     <string name="pressure">Pressure</string>
