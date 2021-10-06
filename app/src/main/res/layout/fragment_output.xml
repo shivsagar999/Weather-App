@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <RelativeLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -47,10 +49,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/description"
-            android:drawableTop="@drawable/info"
             android:textAlignment="center"
             android:textColor="#FF000000"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:drawableTopCompat="@drawable/info" />
 
     </LinearLayout>
 
@@ -94,14 +96,14 @@
             android:id="@+id/pressure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/pressure"
             android:text="@string/pressure"
             android:textAlignment="center"
             android:textColor="#FF000000"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description" />
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:drawableTopCompat="@drawable/pressure" />
     </LinearLayout>
 
     <LinearLayout

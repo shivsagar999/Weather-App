@@ -11,7 +11,6 @@ import com.eurofins.weatherapp.adapter.WeatherForecastAdapter
 import com.eurofins.weatherapp.data.WeatherViewModel
 import com.eurofins.weatherapp.databinding.FragmentDailyForecastBinding
 
-
 class DailyForecastFragment : Fragment() {
 
     private val viewModel: WeatherViewModel by activityViewModels()

@@ -2,4 +2,5 @@
 <resources>
     <dimen name="pa">16dp</dimen>
     <dimen name="eighteen_sp">18sp</dimen>
+    <dimen name="twentfive_dp">25dp</dimen>
 </resources>

@@ -16,7 +16,6 @@ import javax.net.ssl.SSLSession
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 
-
 const val baseValue = "https://api.openweathermap.org/data/2.5/"
 const val apiKey = "db56c752cfc4cd7455810275b9736ffc"
 
@@ -81,5 +80,4 @@ object WeatherService {
             throw RuntimeException(e)
         }
     }
-
 }
