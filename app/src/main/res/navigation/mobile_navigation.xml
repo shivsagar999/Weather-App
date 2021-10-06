@@ -2,8 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation.xml"
-    app:startDestination="@id/permissionFragment">
+    app:startDestination="@id/inputFragment">
 
     <fragment
         android:id="@+id/inputFragment"
@@ -34,17 +33,5 @@
         android:name="com.eurofins.weatherapp.DailyForecastFragment"
         android:label="Daily Forecast"
         tools:layout="@layout/fragment_daily_forecast" />
-    <fragment
-        android:id="@+id/permissionFragment"
-        android:name="com.eurofins.weatherapp.weatherprediction.data.PermissionFragment"
-        android:label="fragment_permission"
-        tools:layout="@layout/fragment_permission" >
-        <action
-            android:id="@+id/action_permissionFragment_to_inputFragment"
-            app:destination="@id/inputFragment" />
-        <action
-            android:id="@+id/action_permissionFragment_to_outputFragment"
-            app:destination="@id/outputFragment" />
-    </fragment>
 
 </navigation>

@@ -5,10 +5,9 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.eurofins.weatherapp.weatherprediction.data.WeatherForecastinfo
 import com.eurofins.weatherapp.WeatherService
-
-import com.example.weatherapp.weather.data.WeatherInfo
+import com.eurofins.weatherapp.weather.WeatherInfo
+import com.eurofins.weatherapp.weatherprediction.WeatherForecastinfo
 
 import retrofit2.Call
 import retrofit2.Callback
@@ -32,13 +31,8 @@ class WeatherViewModel: ViewModel() {
                                                     "rainy"))
         val dataset get() = _dataset
 
-        //private var _listUpdated = MutableLiveData<Boolean>(false)
-        //val listUpdated get() = _listUpdated
-
-
         fun getTemperature(text: String){
             getWeather(text)
-
         }
 
     fun getPlace(lat: Double, lon: Double){
@@ -49,12 +43,9 @@ class WeatherViewModel: ViewModel() {
     {
         _dataset.clear()
         getWeatherForecastDaily(lat, lon)
-        //getCurrentPlace(lat, lon)
-
     }
 
     private fun getCurrentPlace(lat: Double, lon: Double) {
-
         val weatherForecast = WeatherService.weatherInstance.getWeather(lat, lon)
         weatherForecast.enqueue(object: Callback<WeatherInfo>{
             override fun onResponse(
@@ -69,11 +60,7 @@ class WeatherViewModel: ViewModel() {
                     _description.value = "Description\n " + result.weather[0].main
                     _cloudCover.value = "Cloud Cover\n" + result.clouds.all.toString() + "%"
                     _pressure.value = "Pressure\n " + result.main.pressure.toString() + " mbar"
-
-
-
-                }
-                else{
+                } else{
                     _temperatureAndPlace.value = "Incorrect Lat or lon"
                 }
             }
@@ -84,10 +71,6 @@ class WeatherViewModel: ViewModel() {
         })
 
     }
-
-
-
-
 
     private fun getWeatherForecastDaily(lat: Double, lon: Double) {
 
@@ -101,21 +84,12 @@ class WeatherViewModel: ViewModel() {
                 val result = response.body()
 
                 if(result != null){
-                   // _temperatureAndPlace.value = "lat: " + result.lat + "\nlon: " + result.lon
-                    //_pressure.value = "Pressure\n" + result.current.pressure+" mbar"
-                   // _cloudCover.value = " Clouds\n" + result.current.clouds +"%"
-                   // _description.value = "Description\n" + result.current.weather[0].description
-
-                       //Log.d("Wagle", "Dates are ${formatter.parse(result.daily[0].dt.toString())}")
-
                     for (item in result.daily){
                         _dataset.add(DailyForecastList(item.dt,
                             (item.temp.day-273),
                             item.weather[0].description))
                     }
-
-                }
-                else{
+                } else{
                     _temperatureAndPlace.value = "Incorrect Lat or lon"
                 }
             }
@@ -129,7 +103,6 @@ class WeatherViewModel: ViewModel() {
 
 
     private fun getWeather(pin: String) {
-
         val pinCountry = "$pin,in"
         Log.d("Wagle", " your pincode  $pinCountry")
 
@@ -148,25 +121,17 @@ class WeatherViewModel: ViewModel() {
 
                     Log.d("Wagle", "Retrofit response is successfully fetched")
                     Log.d("Wagle", "your  response text ${temperatureAndPlace.value}")
-
-                }
-
-                else{
+                } else{
                     Log.d("Wagle", "Error in pincode")
                     _temperatureAndPlace.value = "Incorrect Pin"
-
                 }
             }
 
             override fun onFailure(call: Call<WeatherInfo>, t: Throwable) {
                 Log.d("Wagle", "Could not fetch the retrofit response $t.message() ")
                 _temperatureAndPlace.value = "Error in fetching please check your connection"
-
             }
-
         })
-
-
         Log.d("Wagle", "your text $temperatureAndPlace")
     }
 }

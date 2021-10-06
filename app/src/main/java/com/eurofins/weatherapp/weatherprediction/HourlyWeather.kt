@@ -1,7 +1,6 @@
-package com.eurofins.weatherapp.weatherPrediction.data
+package com.eurofins.weatherapp.weatherprediction
 
-import com.eurofins.weatherapp.weather.data.Weather
-import com.eurofins.weatherapp.weatherprediction.data.Rain
+import com.eurofins.weatherapp.weather.Weather
 
 
 data class HourlyWeather(val dt: Long, val temp: Float, val feels_like: Float,

@@ -1,7 +1,8 @@
 package com.eurofins.weatherapp
 
-import com.eurofins.weatherapp.weatherprediction.data.WeatherForecastinfo
-import com.eurofins.weatherapp.weather.data.WeatherInfo
+import android.annotation.SuppressLint
+import com.eurofins.weatherapp.weather.WeatherInfo
+import com.eurofins.weatherapp.weatherprediction.WeatherForecastinfo
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -15,11 +16,9 @@ import javax.net.ssl.SSLSession
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 
-//api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid=db56c752cfc4cd7455810275b9736ffc
 
 const val baseValue = "https://api.openweathermap.org/data/2.5/"
 const val apiKey = "db56c752cfc4cd7455810275b9736ffc"
-
 
 interface WeatherInterface {
 
@@ -37,7 +36,6 @@ interface WeatherInterface {
         @Query("lat") latitude: Double,
         @Query("lon") longitude: Double,
     ): Call<WeatherForecastinfo>
-
 }
 
 object WeatherService {
@@ -50,10 +48,11 @@ object WeatherService {
         weatherInstance = retrofit.create(WeatherInterface::class.java)
     }
 
-
+    @SuppressLint("TrustAllX509TrustManager")
     private fun createOkHttpClient(): OkHttpClient? {
         return try {
             val trustAllCerts = arrayOf<TrustManager>(
+                @SuppressLint("CustomX509TrustManager")
                 object : X509TrustManager {
                     override fun checkClientTrusted(
                         chain: Array<X509Certificate?>?,
@@ -67,7 +66,7 @@ object WeatherService {
                     ) {
                     }
 
-                    override fun getAcceptedIssuers(): Array<X509Certificate?>? {
+                    override fun getAcceptedIssuers(): Array<X509Certificate?> {
                         return arrayOf()
                     }
                 }
