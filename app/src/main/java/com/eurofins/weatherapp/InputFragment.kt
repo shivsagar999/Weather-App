@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -26,6 +27,28 @@ class InputFragment : Fragment() {
     private lateinit var _binding: FragmentInputBinding
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private val binding get() = _binding
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        requireActivity()
+            .onBackPressedDispatcher
+            .addCallback(this, object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    Log.d("Wagle", "Fragment back pressed invoked")
+                    // Do custom work here
+                    activity?.finish()
+
+                    // if you want onBackPressed() to be called as normal afterwards
+                    if (isEnabled) {
+                        isEnabled = false
+                        requireActivity().onBackPressed()
+                    }
+                }
+            }
+            )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,7 +68,7 @@ class InputFragment : Fragment() {
             findNavController().navigate(R.id.action_inputFragment_to_outputFragment)
         }
     }
-
+/*
     override fun onStart() {
         super.onStart()
         fusedLocationProviderClient =
@@ -82,5 +105,5 @@ class InputFragment : Fragment() {
 
             }
         }
-    }
+    }*/
 }
