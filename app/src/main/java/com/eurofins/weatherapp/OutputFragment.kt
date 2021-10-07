@@ -51,7 +51,6 @@ class OutputFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.searchButton.setOnClickListener {
             backButton.mOnBackPressed()
-
         }
         Log.d("Wagle", " You are inside OnViewCreated of OutputFragment")
         val temp: String = safeArgs.weatherInfo
