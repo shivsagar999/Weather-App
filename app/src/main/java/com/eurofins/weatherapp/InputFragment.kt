@@ -10,7 +10,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.eurofins.weatherapp.data.WeatherViewModel
 import com.eurofins.weatherapp.databinding.FragmentInputBinding
-import com.google.android.gms.location.FusedLocationProviderClient
 
 class InputFragment : Fragment() {
 
@@ -30,7 +29,6 @@ class InputFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.button.setOnClickListener {
             val pin = binding.inputText.text.toString()
             viewModel.getTemperature(pin)

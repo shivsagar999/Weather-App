@@ -1,5 +1,6 @@
 package com.eurofins.weatherapp
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,14 +12,30 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.eurofins.weatherapp.data.WeatherViewModel
 import com.eurofins.weatherapp.databinding.FragmentOutputBinding
+import java.lang.Exception
 
 
 class OutputFragment : Fragment() {
+
+    interface iOnBackPressed{
+        fun mOnBackPressed()
+    }
+    lateinit var  backButton: iOnBackPressed
 
     private val viewModel: WeatherViewModel by activityViewModels()
     private val safeArgs: OutputFragmentArgs by navArgs()
     private lateinit var _binding: FragmentOutputBinding
     private val binding get() = _binding
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        try {
+            backButton = context as iOnBackPressed
+        }catch (e: Exception){
+            Log.d("Wagle", "interface cannot be attached")
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +50,8 @@ class OutputFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.searchButton.setOnClickListener {
-            findNavController().navigate(R.id.action_outputFragment_to_inputFragment)
+            backButton.mOnBackPressed()
+
         }
         Log.d("Wagle", " You are inside OnViewCreated of OutputFragment")
         val temp: String = safeArgs.weatherInfo
