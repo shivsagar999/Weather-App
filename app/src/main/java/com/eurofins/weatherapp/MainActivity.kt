@@ -19,7 +19,7 @@ import com.eurofins.weatherapp.data.WeatherViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OutputFragment.iOnBackPressed {
 
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private val locationAccesser = 10001
@@ -53,6 +53,13 @@ class MainActivity : AppCompatActivity() {
             //findNavController().navigate(R.id.action_permissionFragment_to_inputFragment)
         }
     }
+
+    override fun mOnBackPressed() {
+        onBackPressed()
+    }
+
+
+
 
     private fun getPermission() {
         val navHostFragment =
