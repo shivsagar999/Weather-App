@@ -8,7 +8,6 @@ import androidx.lifecycle.ViewModel
 import com.eurofins.weatherapp.WeatherService
 import com.eurofins.weatherapp.weather.WeatherInfo
 import com.eurofins.weatherapp.weatherprediction.WeatherForecastinfo
-
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
