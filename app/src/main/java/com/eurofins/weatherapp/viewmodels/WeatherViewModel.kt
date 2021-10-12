@@ -26,6 +26,9 @@ class WeatherViewModel : ViewModel() {
     private var _pressure = MutableLiveData<String>()
     val pressure: LiveData<String> get() = _pressure
 
+    private var _buttonVisibility = MutableLiveData<Boolean>(false)
+    val buttonVisibility: MutableLiveData<Boolean> get() = _buttonVisibility
+
     private var _dataset: MutableList<DailyForecastList> =
         mutableListOf(DailyForecastList(1633327200, 24.0f,
             "rainy"))
@@ -42,6 +45,10 @@ class WeatherViewModel : ViewModel() {
     fun getWeatherForecast(lat: Double, lon: Double) {
         _dataset.clear()
         getWeatherForecastDaily(lat, lon)
+    }
+
+    fun makeButtonInvincible(state: Boolean){
+        _buttonVisibility.value = state
     }
 
     private fun getCurrentPlace(lat: Double, lon: Double) {
