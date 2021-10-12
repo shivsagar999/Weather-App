@@ -11,4 +11,5 @@
 
     <string name="temperature">Temperature</string>
     <string name="search_button">Search button</string>
+    <string name="weather_forecast_is_only_available_of_your_current_location">Weather Forecast is only available of your current location</string>
 </resources>

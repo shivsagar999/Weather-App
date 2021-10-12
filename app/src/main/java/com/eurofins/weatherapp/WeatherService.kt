@@ -48,7 +48,7 @@ object WeatherService {
     }
 
     @SuppressLint("TrustAllX509TrustManager")
-    private fun createOkHttpClient(): OkHttpClient? {
+    private fun createOkHttpClient(): OkHttpClient {
         return try {
             val trustAllCerts = arrayOf<TrustManager>(
                 @SuppressLint("CustomX509TrustManager")
@@ -74,7 +74,7 @@ object WeatherService {
             sslContext.init(null, trustAllCerts, SecureRandom())
             OkHttpClient.Builder()
                 .sslSocketFactory(sslContext.socketFactory)
-                .hostnameVerifier { hostname: String?, session: SSLSession? -> true }
+                .hostnameVerifier { _: String?, _: SSLSession? -> true }
                 .build()
         } catch (e: Exception) {
             throw RuntimeException(e)
