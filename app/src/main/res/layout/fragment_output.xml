@@ -30,6 +30,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="@dimen/six_dp"
             android:text="@string/temperature"
+            android:textColor="#FF000000"
             android:textAlignment="center"
             android:textSize="@dimen/thirty_sp" />
 

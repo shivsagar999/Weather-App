@@ -2,8 +2,6 @@ package com.eurofins.weatherapp
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.app.AlertDialog
-import android.app.Fragment
 import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.location.Location
