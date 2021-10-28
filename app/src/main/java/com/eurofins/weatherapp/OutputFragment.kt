@@ -1,6 +1,5 @@
 package com.eurofins.weatherapp
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,33 +8,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
-import com.eurofins.weatherapp.data.WeatherViewModel
 import com.eurofins.weatherapp.databinding.FragmentOutputBinding
-import java.lang.Exception
 
 
 class OutputFragment : Fragment() {
 
-    interface iOnBackPressed{
-        fun mOnBackPressed()
-    }
-    lateinit var  backButton: iOnBackPressed
-
-    private val viewModel: WeatherViewModel by activityViewModels()
-    private val safeArgs: OutputFragmentArgs by navArgs()
+    private val outputFragmentViewModel: WeatherViewModel by activityViewModels()
     private lateinit var _binding: FragmentOutputBinding
     private val binding get() = _binding
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-
-        try {
-            backButton = context as iOnBackPressed
-        }catch (e: Exception){
-            Log.d("Wagle", "interface cannot be attached")
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,19 +30,25 @@ class OutputFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.searchButton.setOnClickListener {
-            backButton.mOnBackPressed()
+            findNavController().navigate(R.id.action_outputFragment_to_inputFragment)
         }
         Log.d("Wagle", " You are inside OnViewCreated of OutputFragment")
-        val temp: String = safeArgs.weatherInfo
-        binding.textView.text = temp
-        viewModel.temperatureAndPlace.observe(viewLifecycleOwner,
+        outputFragmentViewModel.temperatureAndPlace.observe(viewLifecycleOwner,
             { newWord -> binding.textView.text = newWord })
-        viewModel.description.observe(viewLifecycleOwner,
+        outputFragmentViewModel.description.observe(viewLifecycleOwner,
             { newWord -> binding.description.text = newWord })
-        viewModel.cloudCover.observe(viewLifecycleOwner,
+        outputFragmentViewModel.cloudCover.observe(viewLifecycleOwner,
             { newWord -> binding.cloudCover.text = newWord })
-        viewModel.pressure.observe(viewLifecycleOwner,
+        outputFragmentViewModel.pressure.observe(viewLifecycleOwner,
             { newWord -> binding.pressure.text = newWord })
+        outputFragmentViewModel.dailyForecastButton.observe(viewLifecycleOwner,
+            {
+                if (it) {
+                    binding.nextScreen.visibility = View.GONE
+                } else {
+                    binding.nextScreen.visibility = View.VISIBLE
+                }
+            })
         binding.nextScreen.setOnClickListener {
             findNavController().navigate(R.id.action_outputFragment_to_dailyForecastFragment)
         }

@@ -8,13 +8,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.eurofins.weatherapp.R
 import com.eurofins.weatherapp.adapter.WeatherForecastAdapter.WeatherForecastViewHolder
-import com.eurofins.weatherapp.data.DailyForecastList
+import com.eurofins.weatherapp.weatherprediction.DailyWeather
+import java.text.SimpleDateFormat
+import java.util.*
 
-class WeatherForecastAdapter(private val dataset: List<DailyForecastList>) :
+class WeatherForecastAdapter(private val dataset: List<DailyWeather>) :
     RecyclerView.Adapter<WeatherForecastViewHolder>() {
+
+    private val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy", Locale("Hindi"))
+    private val calendar = Calendar.getInstance()
+
     class WeatherForecastViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView1: TextView = view.findViewById(R.id.temperature)
-        val textView2: TextView = view.findViewById(R.id.description)
+        val temperature: TextView = view.findViewById(R.id.temperature)
+        val description: TextView = view.findViewById(R.id.description)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherForecastViewHolder {
@@ -27,10 +33,11 @@ class WeatherForecastAdapter(private val dataset: List<DailyForecastList>) :
     override fun onBindViewHolder(holder: WeatherForecastViewHolder, position: Int) {
         Log.d("Wagle", "You are inside onBindViewHolder")
         val item = dataset[position]
-        val desc = item.description
-        val temperature = item.temp.toString()
-        holder.textView1.text = temperature
-        holder.textView2.text = desc
+        val desc = item.weather[0].description
+        val temperature = String.format("%.2f", (item.temp.day - 273))
+        calendar.add(Calendar.DAY_OF_YEAR, 1)
+        holder.temperature.text = "${simpleDateFormat.format(calendar.time)}- $temperature °C"
+        holder.description.text = desc
     }
 
     override fun getItemCount(): Int {

@@ -28,7 +28,9 @@
             app:destination="@id/dailyForecastFragment" />
         <action
             android:id="@+id/action_outputFragment_to_inputFragment"
-            app:destination="@id/inputFragment" />
+            app:destination="@id/inputFragment"
+            app:popUpTo="@id/inputFragment"
+            app:popUpToInclusive="true" />
 
     </fragment>
     <fragment

@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg1"
+    android:background="#32BCD1"
     android:padding="@dimen/twentfive_dp"
     tools:context=".DailyForecastFragment">
+
+    <TextView
+        android:id="@+id/imp_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weather_forecast_is_only_available_of_your_current_location"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -14,6 +24,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:scrollbars="vertical"
+        android:layout_below="@+id/imp_message"
         app:layoutManager="LinearLayoutManager" />
 
-</FrameLayout>
+</RelativeLayout>
