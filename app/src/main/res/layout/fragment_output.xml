@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_bg">
+        android:background="@drawable/gradient_bg2">
 
         <ImageView
             android:id="@+id/search_button"

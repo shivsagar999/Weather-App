@@ -93,11 +93,12 @@ class WeatherViewModel : ViewModel() {
                 response: Response<WeatherForecastinfo>,
             ) {
                 val result = response.body()
-
-                if (result != null) {
-                    _dataset = result.daily
+                if (response.isSuccessful) {
+                    if (result != null) {
+                        _dataset = result.daily
+                    }
                 } else {
-                    _temperatureAndPlace.value = "Incorrect Lat or lon"
+                    _temperatureAndPlace.value = response.message()
                 }
             }
 

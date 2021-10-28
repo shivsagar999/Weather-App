@@ -2,6 +2,8 @@ package com.eurofins.weatherapp
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.app.Fragment
 import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.location.Location
@@ -26,7 +28,7 @@ class InputFragment : Fragment() {
     private val inputFragmentViewModel: WeatherViewModel by activityViewModels()
     private lateinit var _binding: FragmentInputBinding
     private val binding get() = _binding
-    private val PATTERN = Regex("^[1-9][0-9]{5}\$")
+    private val PATTERN: Regex = Regex("^[1-9][0-9]{5}\$")
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private val locationAccessor = 10001
 
